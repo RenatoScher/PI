@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GM Pizzaria - Register</title>
+    <link rel="stylesheet" href="../CSS/global.css">
+    <link rel="stylesheet" href="../CSS/login/register.css">
+</head>
+<body>
+    <div id="register1">
+        <img src="../Images/gm_logo1.png" alt="logo" id="gmLogo">
+        <form action="./registerSMS.html">
+            <label for="name">Nome:</label>
+            <input type="text" name="name">
+
+            <label for="passw">Senha:</label>
+            <input type="password" name="passw">
+
+            <label for="phonenumb">Telefone:</label>
+            <input type="tel" name="phonenumb">
+
+            <label for="email">E-Mail:</label>
+            <input type="email" name="email">
+
+            <label for="birth">Data de Nascimento:</label>
+            <input type="date" name="birth">
+
+            <!-- <div id="address">
+                <p>Endereço :3</p>
+            </div> -->
+
+            <div id="TOS">
+                <div>
+                    <input type="checkbox" name="agreement">
+                    <label for="agreement">Eu concordo com os <a href="#">Termos de Uso</a></label>
+                </div>
+                <p style="align-self: center; margin-top: 6px;">Já tem uma conta? <a href="./login.html">Fazer login</a></p>
+            </div>
+
+            <input type="submit" name="submit" id="submit" value="Próximo">
+        </form>
+    </div>
+</body>
+</html>

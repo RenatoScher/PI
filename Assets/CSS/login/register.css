@@ -1,0 +1,98 @@
+body {
+    display: grid;
+    place-items: center;
+    height: min-content;
+    min-height: 100vh;
+}
+
+a {
+    color: beige;
+}
+
+body > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 5px solid rgba(128, 23, 23, 0.3);
+    border-radius: 7.5px;
+    width: 35vw;
+    background-color: rgba(212, 98, 76, 0.15);
+    backdrop-filter: blur(1px);
+    box-shadow: 0px 4px 10px 6.5px rgba(99, 9, 9, 0.7);
+}
+
+body > div#register1 {
+    height: 80vh;
+}
+
+#gmLogo {
+    margin-bottom: 24px;
+    margin-top: 24px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    width: 30vw;
+    row-gap: 2px;
+}
+
+form > input {
+    margin-bottom: 6px;
+    border: 3px solid #b63c3c;
+    border-radius: 4px;
+}
+
+
+form > #TOS {
+    align-self: center;
+    margin-top: 6px;
+    margin-bottom: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+form > #submit {
+    width: 40%;
+    height: 28px;
+    align-self: center;
+}
+
+/* form > #address{
+    height: 1.5rem;
+    width: 10rem;
+    background-color: white;
+    border-radius: 0.35rem;
+    text-align: center;
+} */
+
+body > div#register2 {
+    height: 56vh;
+    font-size: larger;
+}
+
+#smsBox {
+    width: 84%;
+    display: flex;
+    flex-direction: column;
+    row-gap: 18px;
+}
+
+#smsBox > #smsNext {
+    width: 40%;
+    height: 26px;
+    align-self: center;
+    margin-top: 16px;
+}
+
+#smsNext > button {
+    height: 100%;
+    width: 100%;
+}
+
+#resend {
+    background-color: transparent;
+    border: none;
+    text-decoration: underline;
+    font-size: 14px;
+}

@@ -1,0 +1,33 @@
+body > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+section#slideShow {
+    height: 84vh;
+    width: 100%;
+    border: rgba(0, green, blue , 0) solid;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+section#slideShow > img {
+    height: 180px;
+    width: 420px;
+    margin-top: 64px;
+}
+
+section#description {
+    width: 40vw;
+}
+
+section#description > h2 {
+    color: black;
+}
+
+section#description > * {
+    text-align: center;
+}
+
