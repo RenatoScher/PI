@@ -5,12 +5,13 @@ body > div {
 }
 
 section#slideShow {
-    height: 84vh;
+    height: 54vh;
     width: 100%;
     border: rgba(0, green, blue , 0) solid;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    padding-top: 14vw;
 }
 
 section#slideShow > img {
@@ -21,13 +22,98 @@ section#slideShow > img {
 
 section#description {
     width: 40vw;
+    padding-left: 40px;
+
 }
 
 section#description > h2 {
-    color: black;
+    color: white;
 }
+
 
 section#description > * {
     text-align: center;
 }
+.all{
+    display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 10px;
+        grid-row-gap: 0px;
+        width: 99.4%;
+        height: 35vh;
+    margin-bottom: 450px;
+    justify-items: center;
+        
+}
+.menuOpt{
+    border:5px solid rgba(128, 23, 23, 0.3);
+    border-radius: 7.5px;
+    width: 65%;
+    background-color: rgba(212, 98, 76, 0.15);
+    backdrop-filter: blur(1px);
+    box-shadow: 0px 4px 10px 6.5px rgba(99, 9, 9, 0.7);
+    transition: transform 0.2s ease-in-out;
+    background-size: cover;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    color:white;
+}
+.menuOpt:hover{
+    transform:  scale(1.03);
+}
+#furry1{
+    grid-area: 1 / 1 / 2 / 2;
+    background:red;
+}
+#furry2{
+    grid-area: 1 / 2 / 2 / 3;
+    background-image: url(https://cdn.discordapp.com/attachments/1148343823471235072/1283782249484910704/jumpscare.webp?ex=66e43ee3&is=66e2ed63&hm=08aeb11f1465c886c89b83a8217770c333270939872f9babe7c762c8f408c41a&);
+}
+#furry3{
+    grid-area: 1 / 3 / 2 / 4;
+    background-image: url(https://cdn.discordapp.com/attachments/1148343823471235072/1283782496894582795/329331.png?ex=66e43f1e&is=66e2ed9e&hm=34a385de442506c1c34e0e08fa650ec531b7b7992d75a3faeee0e6ff22f10291&);
+}
+#descrImg{
+    width: 100%;
+    height: 260px;
+    background:red;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+#imagemPizza{
+    height: 700px;
+    width:700px;
 
+    background-repeat: no-repeat;
+    background-image: url(../Images/pizza.png);
+    background-size: contain;
+    background-position:center ;
+    animation: pizzaIntro 2s;
+}
+p{
+    color: white;
+}
+a{
+    color: black;
+    text-decoration: none;
+    transition-duration: 0.5s;
+    
+}
+a:hover{
+    color: white;
+    
+    
+}
+
+@keyframes pizzaIntro{
+    from{
+        transform: translateX(700px);
+    }
+    to{
+        transform: translateX(0);
+    }
+}

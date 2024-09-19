@@ -1,0 +1,26 @@
+body > div {
+    height: 100vh;
+}
+
+#entireScreen {
+    margin-top: 12vh;
+    display: flex;
+}
+
+#menu {
+    background-color: antiquewhite;
+}
+
+#menuButtons {
+    display: flex;
+}
+
+#menuOptions > div {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(auto-fill, 120px);
+}
+
+#cart {
+    background-color: wheat;
+}

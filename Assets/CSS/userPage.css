@@ -1,20 +1,23 @@
 
 #userCard {
     position: relative;
-    padding: 48px 0 0 48px;
+    padding: 48px 48px 0 48px;
     top: 16vh;
     left: 10vw;
     height: 76vh;
     width: 80vw;
+    margin-bottom: 200px;
 
     border: 5px solid rgba(207, 175, 160, 0.6);
-    background-color: rgba(244, 211, 196, 1);
+    background-color: rgb(255, 255, 255);
     border-radius: 5px;
     
 
     display: grid;
     grid-template-rows: 158px 20px 220px 48px;
     grid-template-columns: 78px 92px 1fr;
+
+    animation: card_in 1s ;
 }
 
 #userCard > h2 {
@@ -41,4 +44,43 @@
     display: flex;
     flex-direction: column;
     row-gap: 18px;
+}
+.botoes{
+    border:none;
+    background:red;
+    color:white;
+    height:50px;
+    width: 200px;
+    transition-duration:0.1s;
+    border-radius: 7.456px;
+    cursor:pointer;
+}
+.botoes:active{
+    scale:0.97;
+
+    
+
+}
+#botoesUser{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+        margin-top: 80px;
+    
+}
+
+/*keyframes*/
+@keyframes card_in {
+    from{
+        opacity:0;
+        transform:translateY(-100px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0px);
+    }
+}
+a{
+    text-decoration:none;
+    color:white;
 }

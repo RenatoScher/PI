@@ -6,6 +6,7 @@
 body {
     width: 100vw;
     max-width: 100%;
+    min-height: 100vh;
     background-image: url(../Images/gm_back.png);
     background-attachment: fixed;
     background-position: 50%;
@@ -14,42 +15,48 @@ body {
     scroll-margin-top: 16vh;
 }
 
-body > div {
+body>div {
     width: 100%;
 }
 
-body > div > .pad {
-    padding-top: 12vh;
+body>div>.pad {
+    padding-top: 14vh;
 }
 
 nav#topbar {
-    background-color:rgb(189, 71, 58);
     width: 100%;
     height: 12vh;
     position: fixed;
-    display:flex;
+    display: flex;
     border-radius: 0px 0px 20px 20px;
     justify-content: space-between;
     overflow: hidden;
     box-shadow: 15px 0px 20px black;
-    z-index: 122;
+    border: 2.5px solid rgba(128, 23, 23, 0.9);
+    border-top: none;
+    background-color: rgba(205, 74, 54, 0.767);
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 4px 10px 6.5px rgba(99, 9, 9, 0.7);
+    z-index: 2;
 }
 
-#topbar > img {
+#topbar>img {
     margin-left: 12px;
     margin-top: 6px;
     width: 240px;
     height: 80px;
 }
 
-#conjunto{
+#conjunto {
     width: 300px;
-    height:100%;
+    height: 100%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
-}/*Se mata penis man*/
-#conjunto div{
+}
+
+/*Se mata penis man*/
+#conjunto div {
 
     height: 100%;
     width: 33.3%;
@@ -59,33 +66,39 @@ nav#topbar {
     transition: width 0.7s;
     cursor: pointer;
 
-/*Se mata penis man*/
-/*se mata labbomt*/
+    /*Se mata penis man*/
+    /*se mata labbomt*/
 }
-#conjunto div:hover{
+
+#conjunto div:hover {
     width: 50%;
     z-index: 1;
 }
-#login{
-    
 
-    background-color:rgb(204, 121, 58);
+#login {
+
+
+    background-color: rgba(204, 121, 58, 0.9);
+    /*Se mata penis man*/
+}
+
+#entrar {
+
+    /*Se mata penis man*/
+    background-color: rgba(180, 105, 48, 0.9);
+}
+
 /*Se mata penis man*/
-}
-#entrar{
-    
+#sla {
     /*Se mata penis man*/
-    background-color:rgb(180, 105, 48);
-}/*Se mata penis man*/
-#sla{
-    /*Se mata penis man*/
-    background-color:rgb(172, 79, 50);
+    background-color: rgba(172, 79, 50, 0.9);
 }
+
 footer {
     background-color: darkred;
     position: relative;
     bottom: 0;
-    margin-top: 24vh;
+    margin-top: 0vh;
     width: 100%;
     height: 42vh;
 }

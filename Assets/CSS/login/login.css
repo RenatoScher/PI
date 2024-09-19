@@ -89,9 +89,25 @@ body > div#register2 {
     flex-direction: column;
 }
 #smsCodeBox > div {
-    align-self: center;
-    margin-top: 6px;
+    width: 100%;
+    margin-top: 4%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 6px;
+    margin-bottom: 6px;
 }
 #smsCodeBox a {
     color: beige;
+}
+
+#renewPassword {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+}
+
+#renewPassword > div {
+    display: flex;
+    flex-direction: column;
 }
