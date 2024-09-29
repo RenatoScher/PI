@@ -1,0 +1,75 @@
+body > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#items {
+    height: 70vh;
+    width: 72vw;
+    background-color: aliceblue;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 24px;
+    row-gap: 12px;
+    margin-top: 12px;
+}
+
+#items > p {
+    font-size: larger;
+    vertical-align: bottom;
+}
+
+#itemsBox {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    overflow-y: scroll;
+}
+
+#itemsBox > div {
+    width: 25%;
+    height: 40%;
+    max-width: 25%;
+    outline: solid;
+}
+
+#address {
+    background-color: antiquewhite;
+    margin-top: 12px;
+    padding-left: 18px;
+}
+
+#address > label {
+    font-size: larger;
+}
+
+#address > select {
+    height: 28px;
+    width: 128px;
+}
+
+#customAddress {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    margin-top: 12px;
+    padding-bottom: 6px;
+}
+
+#customAddress label {
+    font-size: large;
+}
+
+#buttons {
+    display: flex;
+    justify-content: center;
+    column-gap: 32px;
+    margin-top: 12px;
+}
+
+#buttons > button {
+    width: 25%;
+    height: 48px;
+    font-size: medium;
+}

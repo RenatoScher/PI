@@ -2,6 +2,7 @@ body > div {
     display: flex;
     flex-direction: column;
     align-items: center;
+    overflow-x: hidden;
 }
 
 section#slideShow {
@@ -59,24 +60,24 @@ section#description > * {
     align-items:center;
     justify-content: center;
     color:white;
+    background: red;
 }
 .menuOpt:hover{
     transform:  scale(1.03);
 }
-#furry1{
+#opt1{
     grid-area: 1 / 1 / 2 / 2;
-    background:red;
+    
 }
-#furry2{
+#opt2{
     grid-area: 1 / 2 / 2 / 3;
-    background-image: url(https://cdn.discordapp.com/attachments/1148343823471235072/1283782249484910704/jumpscare.webp?ex=66e43ee3&is=66e2ed63&hm=08aeb11f1465c886c89b83a8217770c333270939872f9babe7c762c8f408c41a&);
+
 }
-#furry3{
+#opt3{
     grid-area: 1 / 3 / 2 / 4;
-    background-image: url(https://cdn.discordapp.com/attachments/1148343823471235072/1283782496894582795/329331.png?ex=66e43f1e&is=66e2ed9e&hm=34a385de442506c1c34e0e08fa650ec531b7b7992d75a3faeee0e6ff22f10291&);
 }
 #descrImg{
-    width: 100%;
+    width: 98vw;
     height: 260px;
     background:red;
     display: flex;

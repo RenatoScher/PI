@@ -3,24 +3,98 @@ body > div {
 }
 
 #entireScreen {
-    margin-top: 12vh;
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 12vw;
+    width: 72vw;
+    
+
+    
 }
 
 #menu {
-    background-color: antiquewhite;
+    background-color: rgb(252, 202, 164);
+    border-radius: 10px 0px 0px 10px;
+    margin-bottom: 50px;
+    overflow: hidden;
+    height: 80vh;
 }
-
+#menu > h2{
+    padding: 10px;
+}
+#menuOptions{
+    height: 76vh;
+    overflow: scroll;
+}
 #menuButtons {
     display: flex;
 }
-
+#menuPorcao{
+    padding: 15px;
+    padding-right: 0px;
+}
 #menuOptions > div {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(auto-fill, 120px);
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+#menuOptions > div > div {
+    width: 30%;
+    height: 36vh;
+    border: solid;
+    border-radius: 10px;
+    box-shadow: 2.5px 2.5px 10px 0.5px rgba(31, 30, 30, 0.704);
+    margin: 5px;
+}
+
+#menuOptions > div > div > p {
+    font-size: x-large;
 }
 
 #cart {
-    background-color: wheat;
+    background-color: rgb(246, 154, 124);
+    height: 80vh;
+    position: sticky;
+    border-radius: 0px 10px 10px 0px
+}
+
+
+#pizzaFlavorsBack {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, .6);
+    width: 100vw;
+    height: 90vh;
+    display: grid;
+    place-items: center;
+}
+
+#pizzaFlavorsBack > div {
+    width: 60vw;
+    height: 70vh;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 32px 32px 1fr 48px;
+}
+
+#flavors {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+}
+
+#flavors > div {
+    width: 100%;
+    height: 30%;
+    min-height: 30%;
+    outline: solid;
+    background-color: aliceblue;
+}
+
+#pizzaFlavorsBack > div > div:last-child {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: 1fr;
 }

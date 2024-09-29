@@ -1,0 +1,56 @@
+#containerFeedBack {
+    height: 95vw;
+    width: 95.9vw;
+    color: black;
+    display: flex;
+
+}
+
+#bloco {
+    height: 90%;
+    width: 90%;
+    background: white;
+    margin: 140px;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#title {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.group {
+    min-height: 180px;
+    width: 100%;
+    /* border:solid 3px green */
+}
+
+.stars {
+    height: 140px;
+    width: 100%;
+    border:solid 3px green; 
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.stars>input{
+    display:none;
+}
+.stars>label::before{
+    content: '';
+    height: 90px;
+    width: 90px;
+    background: red;
+}
+.stars >  label{
+    border:3px solid yellow;
+    display:flex;
+    background-color: green;
+    height: 100px;
+    width: 100px;
+    
+}

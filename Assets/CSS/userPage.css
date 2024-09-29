@@ -1,15 +1,18 @@
-
+#sad{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    height: 100vh;
+    padding-top: 15vh;
+}
 #userCard {
-    position: relative;
     padding: 48px 48px 0 48px;
-    top: 16vh;
-    left: 10vw;
     height: 76vh;
     width: 80vw;
     margin-bottom: 200px;
 
     border: 5px solid rgba(207, 175, 160, 0.6);
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(253, 217, 190);
     border-radius: 5px;
     
 
@@ -40,17 +43,17 @@
 
 #userInfo {
     grid-area: 3 / 2 / 3 / 4;
-    font-size: larger;
+    font-size: 25px;
     display: flex;
     flex-direction: column;
     row-gap: 18px;
 }
 .botoes{
     border:none;
-    background:red;
+    background:rgb(201, 45, 40);
     color:white;
-    height:50px;
-    width: 200px;
+    height:75px;
+    width: 225px;
     transition-duration:0.1s;
     border-radius: 7.456px;
     cursor:pointer;
@@ -65,7 +68,7 @@
     width: 100%;
     display: flex;
     justify-content: space-around;
-        margin-top: 80px;
+    padding-top: 20px;
     
 }
 
