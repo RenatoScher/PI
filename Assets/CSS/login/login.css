@@ -1,3 +1,11 @@
+* {
+    color: white;
+}
+
+input, button {
+    color: black;
+}
+
 body {
     display: grid;
     place-items: center;
@@ -50,6 +58,7 @@ form > #submit {
     width: 40%;
     height: 28px;
     align-self: center;
+    color: black;
 }
 
 /* form > #address{

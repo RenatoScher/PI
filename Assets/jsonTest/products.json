@@ -1,0 +1,92 @@
+{
+    "Porcao": [
+        {
+            "id": 0,
+            "name": "Batata Frita 250g",
+            "image": "batata_frita.jpg",
+            "price": 8.50,
+            "desc": "250g"
+        },
+        {
+            "id": 1,
+            "name": "Batata Frita 350g",
+            "image": "#",
+            "price": 8.50,
+            "desc": "350g"
+        },
+        {
+            "id": 2,
+            "name": "Batata Frita 500g",
+            "image": "#",
+            "price": 8.50,
+            "desc": "500g"
+        }
+    ],
+    "Bebidas": [
+        {
+            "id": 0,
+            "name": "Suco de Uva",
+            "image": "#",
+            "price": 8.50,
+            "quantidade_ml": 200
+        },
+        {
+            "id": 1,
+            "name": "Suco de Abacaxi",
+            "image": "#",
+            "price": 8.50,
+            "quantidade_ml": 200
+        },
+        {
+            "id": 2,
+            "name": "Suco de Acerola",
+            "image": "#",
+            "price": 8.50,
+            "quantidade_ml": 200
+        },
+        {
+            "id": 3,
+            "name": "Skol",
+            "image": "#",
+            "price": 8.50,
+            "quantidade_ml": 250
+        }
+    ],
+    "Pizzas": [
+        {
+            "id": 0,
+            "image": "#",
+            "price": 8.50,
+            "flavour": "Calabresa",
+            "desc": "fnklkladnklrgsnkl"
+        },
+        {
+            "id": 1,
+            "image": "#",
+            "price": 8.50,
+            "flavour": "Bacon",
+            "desc": "fnklkladnklrgsnkl"
+        },
+        {
+            "id": 2,
+            "image": "#",
+            "price": 8.50,
+            "flavour": "Havaina",
+            "desc": "fnklkladnklrgsnkl"
+        },
+        {
+            "id": 3,
+            "image": "#",
+            "price": 8.50,
+            "flavour": "Chocolate",
+            "desc": "fnklkladnklrgsnkl"
+        },
+        {
+            "id": 4,
+            "image": "#",
+            "price": 20.8,
+            "flavour": "Frango",
+            "desc": "fnklkladnklrgsnkl"
+        }
+    ]
+}

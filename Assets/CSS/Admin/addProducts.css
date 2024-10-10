@@ -1,0 +1,18 @@
+main {
+    width: 80%;
+    height: 70vh;
+}
+
+input, select, option {
+    color: black;
+}
+
+.addCards {
+    display: grid;
+    height: 100%;
+    background-color: aliceblue;
+}
+
+#addPizza, #addPorcao {
+    grid-template-rows: repeat(3, 64px) 1fr;
+}

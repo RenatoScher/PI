@@ -7,6 +7,9 @@
     <title>GM Pizzaria - Página do Usuário</title>
     <link rel="stylesheet" href="CSS/global.css">
     <link rel="stylesheet" href="CSS/userPage.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -14,9 +17,16 @@
         <nav id="topbar">
             <img src="./Images/gm_logo1.png" alt="">
             <div id="conjunto">
-                <div id="login">@</div>
-                <div id="entrar">log in</div>
-                <div id="sla">config</div>
+                <a href="./Assets/LoginPages/login.html">
+                    <div class="topBarOpts" id="login">
+                        login</div>
+                </a>
+                <a href="./Assets/LoginPages/register.html">
+                    <div class="topBarOpts" id="entrar">sign up</div>
+                </a>
+                <a href="/index.html">
+                    <div class="topBarOpts" id="sla">Home</div>
+                </a>
             </div>
         </nav>
 
@@ -32,9 +42,9 @@
                 <p>Senha: *************** (Ícone para alterar)</p>
 
                 <div id="botoesUser">
-                    <button class="botoes">Histórico de Pedidos</button>
-                    <button class="botoes">Nos dê um feedback</button>
-                    <button class="botoes"> <a href="../index.html"> Realizar pedido</a></button>
+                    <a href="/Assets/historico.html"><button class="botoes">Histórico de Pedidos</button></a>
+                    <a href="/Assets/feedback.html"><button class="botoes">Nos dê um feedback</button></a>
+                    <a href="/Assets/OrderPages/menuPage.html"><button class="botoes">  Realizar pedido</button></a>
                 </div>
                 
                 
@@ -52,7 +62,16 @@
 
 
         <footer>
-
+            <div id="redesSociaisGroup">
+                <a href="https://www.instagram.com/gmpizzaria?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><div class="redesSociais" id="rede1"></div></a>
+                <a href="https://www.facebook.com/GMPizzaria"><div class="redesSociais" id="rede2"></div></a>
+            </div>
+            <div id="links">
+                <a href="/Assets/historico.html">historico</a> 
+                <a href="/Assets/OrderPages/menuPage.html">menu</a>
+                <a href="/Assets/LoginPages/forgotPassword.html">login</a>
+                <a href="/Assets/feedback.html">feedback</a>
+            </div>
         </footer>
     </div>
 

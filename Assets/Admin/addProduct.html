@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mein Name ist Gustavo, aber du kannst mich Gus nennen</title>
+    <link rel="stylesheet" href="../CSS/global.css">
+    <link rel="stylesheet" href="../CSS/Admin/addProducts.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div>
+        <nav id="topbar">
+            <img src="../Images/gm_logo1.png" alt="">
+            <div id="conjunto">
+                <a href="./Assets/LoginPages/login.html"><div id="login"><img class="icon" src="https://img.icons8.com/?size=100&id=61050&format=png&color=000000"></div></a>
+                <a href="./Assets/LoginPages/register.html"><div id="entrar">log in</div></a>
+                <a href="./Assets/userPage.html"><div id="sla">config</div></a>
+            </div>
+        </nav>
+
+        <main class="pad">
+            <h2>Adicionar Produtos</h2>
+
+            <select name="type" id="addType">
+                <option value="pizza" selected>Pizza</option>
+                <option value="bebida">Bebida</option>
+                <option value="porcao">Porcao</option>
+            </select>
+            
+            <div id="addPizza" class="addCards">
+                <input type="text" name="flavour" id="pizFlavour" placeholder="Sabor">
+                <input type="number" name="price" id="pizPrice" min="0">
+                <input type="file" name="image" id="pizImage" accept=".jpg">
+                <input type="text" name="desc" id="pizDesc">
+            </div>
+
+            <div id="addBebida" style="display: none;" class="addCards">
+                <input type="text" name="name" id="bebName" placeholder="Nome">
+                <input type="number" name="price" id="bebPrice" min="0">
+                <input type="file" name="image" id="bebImage" accept=".jpg">
+                <input type="number" name="quantity" id="bebQuantity">
+            </div>
+
+            <div id="addPorcao" style="display: none;" class="addCards">
+                <input type="text" name="name" id="porName" placeholder="Nome">
+                <input type="number" name="price" id="porPrice" min="0">
+                <input type="file" name="image" id="porImage" accept=".jpg">
+                <input type="text" name="desc" id="porDesc">
+            </div>
+
+            <button id="sendButton">Enviar</button>
+        </main>
+    </div>
+
+    <script src="../JS/Admin/addProduct.js"></script>
+</body>
+</html>

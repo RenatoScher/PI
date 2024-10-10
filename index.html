@@ -1,55 +1,99 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gm Pizzaria</title>
-    <link rel="stylesheet" href="Assets/CSS/global.css">
-    <link rel="stylesheet" href="Assets/CSS/index.css">
-</head>
-<body>
-    <div>
-        <nav id="topbar">
-            <img src="./Assets/Images/gm_logo1.png" alt="">
-            <div id="conjunto">
-                <div id="login">@</div>
-                <div id="entrar">log in</div>
-                <div id="sla">config</div>
-            </div>
-        </nav>
-        
-        <section id="slideShow" class="pad">
-            <img src="./Assets/Images/gm_logo.png" alt="">
-        </section>
-        <div class="all">
-            <div class="menuOpt" id="opt1">op1</div>
-            <div class="menuOpt" id="opt2">opt2</div>
-            <div class="menuOpt" id="opt3"><a href="/Assets/feedback.html">opt3</a></div>
-        </div>
+<htmI lang="pt-BR">
 
-        <div id="container">
-        <div id="descrImg">
-            <section id="description">
-                <h2><em>Sobre Nós</em></h2>
-                <p>
-                    então uhhh temo q fazer uma descrição aqui, pode ser só contendo o lugar e algumas informações básicas mas é isso msm temos q fazer uma descrição para a GM Pizzaria Toledo <a href="Assets/userPage.html">Placeholder1</a>
-                    <a href="Assets/LoginPages/register.html">Placeholder2</a>
-                    <a href="Assets/OrderPages/menuPage.html">Placeholder3</a>
-                </p>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Gm Pizzaria</title>
+        <link rel="stylesheet" href="Assets/CSS/global.css">
+        <link rel="stylesheet" href="Assets/CSS/index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+            rel="stylesheet">
+    </head>
+
+    <bod>
+        <div>
+            <nav id="topbar">
+                <img src="./Assets/Images/gm_logo1.png" alt="">
+                <div id="conjunto">
+                    <a href="./Assets/LoginPages/login.html">
+                        <div class="topBarOpts" id="login">
+                            login</div>
+                    </a>
+                    <a href="./Assets/LoginPages/register.html">
+                        <div class="topBarOpts" id="entrar">sign up</div>
+                    </a>
+                    <a href="/index.html">
+                        <div class="topBarOpts" id="sla">Home</div>
+                    </a>
+                </div>
+            </nav>
+
+            <section id="slideShow" class="pad">
+                <img src="./Assets/Images/gm_logo.png" alt="">
             </section>
-            <div id="imagemPizza"></div>
+            <div id="whiteBack">
+                <h1 id="tittleWhiteBack">O que vai ser pra hoje?</h1>
+                <div id="menuOpt">
+                    <a href="/Assets/OrderPages/menuPage.html">
+                        <div class="opts" id="opt1">
+                            <div class="imgsOpt"></div>
+                            <h2>Realizar pedido</h2>
+                        </div>
+                    </a>
+
+                    <a href="/Assets/feedback.html"><div class="opts" id="opt2">
+                        <div class="imgsOpt"></div>
+                        <h2>Dar feedback</h2>
+                    </div></a>
+                    
+                    <a href="/Assets/userPage.html"><div class="opts" id="opt3">
+                        <div class="imgsOpt"></div>
+                        <h2>Usuario</h2>
+                    </div></a>
+                    
+
+                </div>
+
+                <div id="container">
+                    <div id="descrImg">
+                        <section id="description">
+                            <h2><em>Sobre Nós</em></h2>
+                            <p>
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Corrupti ad, impedit voluptate optio placeat iure? Dolorum tempora aut quo, iure voluptatum voluptates amet numquam beatae provident dignissimos sapiente voluptas optio.
+                                Exercitationem, vel fuga. Qui modi labore porro tenetur quod, placeat eveniet. Ab cumque a molestias animi esse et distinctio quasi at repellat! Non autem ab earum nihil porro eveniet ipsum! <br>
+                                <a href="Assets/userPage.html">Placeholder1</a>
+                                <a href="Assets/LoginPages/register.html">Placeholder2</a>
+                                <a href="Assets/OrderPages/menuPage.html">Placeholder3</a>
+                            </p>
+                        </section>
+                        <div id="imagemPizza"></div>
+                    </div>
+
+
+                </div>
+            </div>
+
+
+            <footer>
+                <div id="redesSociaisGroup">
+                    <a href="https://www.instagram.com/gmpizzaria?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="><div class="redesSociais" id="rede1"></div></a>
+                    <a href="https://www.facebook.com/GMPizzaria"><div class="redesSociais" id="rede2"></div></a>
+                </div>
+                <div id="links">
+                    <a href="/Assets/historico.html">historico</a>
+                    <a href="/Assets/OrderPages/menuPage.html">menu</a>
+                    <a href="/Assets/LoginPages/forgotPassword.html">login</a>
+                    <a href="/Assets/feedback.html">feedback</a>
+                </div>
+            </footer>
         </div>
-        
-        
+
+        <script src="./Assets/JS/index.js"></script>
         </div>
+        </body>
 
-
-        <footer>
-
-        </footer>
-    </div>
-
-    <script src="./Assets/JS/index.js"></script>
-</div>
-</body>
-</html>
+        </html>

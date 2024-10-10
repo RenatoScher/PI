@@ -1,3 +1,4 @@
+
 body > div {
     height: 100vh;
 }
@@ -6,8 +7,8 @@ body > div {
     display: grid;
     grid-template-columns: 1fr 12vw;
     width: 72vw;
+    height: 0vh;
     
-
     
 }
 
@@ -16,47 +17,246 @@ body > div {
     border-radius: 10px 0px 0px 10px;
     margin-bottom: 50px;
     overflow: hidden;
-    height: 80vh;
+    height: 81.25vh;
 }
 #menu > h2{
     padding: 10px;
 }
 #menuOptions{
-    height: 76vh;
+    height: 74vh;
     overflow: scroll;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    padding-left: 30px;
+}
+#menuOptions > div {
+    padding-top: 92px;
+}
+#menuOptions .productImage {
+    width: 100%;
+    height: 76%;
+    background-size: 100% 100%;
 }
 #menuButtons {
     display: flex;
-}
-#menuPorcao{
-    padding: 15px;
-    padding-right: 0px;
-}
+}   
 #menuOptions > div {
     display: flex;
     flex-wrap: wrap;
+
     
+}
+#searchandtitle{
+    background-color: rgba(222, 96, 77, 0.767);
+    position: absolute;
+    z-index: 2;
+    backdrop-filter: blur(5px);
+    width: 57vw;
+    border-radius: 8px 0px 0px 0px;
+    box-shadow: -9px 1px 10px 6.5px rgba(99, 9, 9, 0.7);
+    height: 75px;
+    padding: 10px;
+    border:5px solid rgba(128, 23, 23, 0.3);
+}
+#searchandtitle > h2{
+margin: 10px;
+
+}
+#menuButtons> input{
+    border-radius: 5px;
+    border: none;
+}
+#orderType{
+    background-color: rgb(154, 43, 23);
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    margin-left: 10px;
+    margin-right: 20px;
+    color: white;
 }
 
 #menuOptions > div > div {
-    width: 30%;
-    height: 36vh;
-    border: solid;
+    width: 28.5%;
+    height: 40vh;
     border-radius: 10px;
     box-shadow: 2.5px 2.5px 10px 0.5px rgba(31, 30, 30, 0.704);
     margin: 5px;
+    background-color: rgba(197, 64, 60, 0.5);
+    overflow: hidden;
+    border:5px solid rgba(128, 23, 23, 0.3);
+
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 75px 1fr 25px;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    cursor: pointer;
+
+}#menuOptions > div > div:hover:before{
+    /* content: 'じぶんおころします。'; */
+    opacity: 0;
+    position: fixed;
+    width: 100%;
+    height: 22.6vh;
+    background-color: rgb(213, 113, 100);
+    position: relative;
+    z-index: 2;
+    top: -22.6vh;
+    animation: appear 0.5s 0.5s forwards;
+    padding: 10px;
+    color: white;
+}
+@keyframes appear{
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+#pizzaSettings{
+    display: grid;
+grid-template-columns: repeat(4, 1fr) !important;
+grid-template-rows: repeat(2, 1fr) !important;
+grid-column-gap: 10px !important;
+grid-row-gap: 5px !important;
+
+}
+
+#quantflavor{
+    grid-area: 1 / 1 / 3 / 2 !important;
+    justify-content: center;
+}
+
+#pizzaSizes{
+    grid-area: 1 / 2 / 3 / 3 !important;
+    justify-content: center;
+}
+
+ul{
+    grid-area: 1 / 3 / 3 / 4 !important;
+    align-self: center;
+}
+#buttonPls{
+    grid-area: 1 / 4 / 3 / 5 !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#buttonPls > button{
+    width: 10vw;
+    height: 5vh;
+}
+
+.productImage{
+    width: 100%;
+}
+#menuOptions > div > div > #titlepizza {
+    font-size: 17.5px;
+    grid-area: 1 / 1 / 2 / 2;
+    color: white;
+    border-bottom: 5px solid rgba(128, 23, 23, 0.3);
+    padding: 10px;
+    justify-self: center;
+    align-self: center;
+
+}
+#menuOptions > div > div > .productImage {
+    grid-area:  2 / 1 / 3 / 2;
+    height: 100%;
 }
 
 #menuOptions > div > div > p {
-    font-size: x-large;
+    grid-area: 4 / 1 / 5 / 2;
+    color: white;
+    outline: 5px solid rgba(128, 23, 23, 0.3);
+    padding: 5px;
+    justify-self: center;
+    align-self: center;
+    width: 100%;
+    text-align: center;
+
+}
+
+#pizzaSettings {
+    width: 94% !important;
+    height: 15vh !important;
+}
+
+#pizzaSettings > div {
+    display: flex;
+    flex-direction: column;
+}
+
+#pizzaSettings > button {
+    height: 30px;
+    width: 80%;
+    justify-self: center;
 }
 
 #cart {
     background-color: rgb(246, 154, 124);
-    height: 80vh;
+    height: 77.5vh;
     position: sticky;
-    border-radius: 0px 10px 10px 0px
+    border-radius: 0px 10px 10px 0px;
+    border:5px solid rgba(128, 23, 23, 0.3);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 1fr 100px;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px; 
+
 }
+
+#cart div:nth-of-type(1){
+    border-bottom: 5px solid rgba(128, 23, 23, 0.3);
+    color: white;
+    padding: 10px;
+    padding-left: 15px;
+    grid-area: 1 / 1 / 2 / 2;
+}
+#cart div:nth-of-type(2){
+    color: white;
+    padding: 10px;
+    padding-left: 15px;
+    grid-area: 2 / 1 / 3 / 2;
+}
+#nextStep{
+    background-color: red;
+    color: white;
+    border:2.5px solid rgba(128, 23, 23, 0.3);
+    border-radius: 10px;
+    width: 8vw;
+    height: 5vh;
+    justify-self: center;
+    align-self: flex-start;
+    margin-top: 10px;
+    cursor: pointer;
+    transition-duration: 0.5s;
+
+}
+#nextStep:hover{
+    scale: 1.05;
+}
+#nextStep:active{
+    scale: 1;
+}
+#cart div:nth-of-type(3){
+    color: white;
+    padding: 10px;
+    padding-left: 25px;
+
+    position: fixed;
+    bottom: 70px;
+    border-top: 5px solid rgba(128, 23, 23, 0.3);
+    grid-area: 3 / 1 / 4 / 2; 
+    width: 9.1vw;
+}
+
 
 
 #pizzaFlavorsBack {

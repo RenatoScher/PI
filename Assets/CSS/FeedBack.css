@@ -1,3 +1,5 @@
+
+
 #containerFeedBack {
     height: 95vw;
     width: 95.9vw;
@@ -7,50 +9,119 @@
 }
 
 #bloco {
-    height: 90%;
-    width: 90%;
-    background: white;
+    
+    min-width: 70vw;
+    background-color: rgb(252, 202, 164);
+    border:5px solid rgba(128, 23, 23, 0.3);
+    min-height: 160vh;
     margin: 140px;
-    padding: 100px;
+    padding: 50px;
     display: flex;
     justify-content: center;
     flex-direction: column;
+    border-radius:12px;
+    animation: mainAnimation 1s;
+
+}
+@keyframes mainAnimation{
+    from{
+        transform:translateY(-50px);
+        opacity: 0;
+    }
+        
+    
+    to{
+        transform: translateY(0px);
+        opacity: 1;
+    }
 }
 
 #title {
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .group {
     min-height: 180px;
     width: 100%;
+    margin-bottom: 20px;
+    margin-top: 40px;
     /* border:solid 3px green */
 }
 
 .stars {
     height: 140px;
     width: 100%;
-    border:solid 3px green; 
     display: flex;
     align-items: center;
     justify-content: space-around;
+    flex-direction: row-reverse;
 }
 .stars>input{
-    display:none;
+   display: none; 
 }
 .stars>label::before{
     content: '';
     height: 90px;
-    width: 90px;
-    background: red;
+    width:90px;
+    background-color: #252525;
+    align-self: center;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    transition: 0.5s;
+
 }
 .stars >  label{
-    border:3px solid yellow;
     display:flex;
-    background-color: green;
     height: 100px;
     width: 100px;
-    
+    justify-content: center;
+    border-radius: 100%;
+    cursor: pointer;
+}
+
+.stars:not(:checked) > label:hover::before,
+.stars:not(:checked) > label:hover ~ label::before{
+    background-color: yellow !important;
+    scale: 1.1;
+}
+
+.stars:not(:checked):has(label:hover) > label.checkedStar:not(label:hover):not(label:hover ~ label)::before {
+    background-color: rgb(146, 146, 18.5) !important;
+}
+
+.stars > .checkedStar:not(:hover)::before {
+    background-color: yellow !important;
+}
+
+#submitArea{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+#submitButton{
+    height: 50px;
+    width: 300px;
+    color: white;
+    border: none;
+    background-color: red;
+    border-radius:12px;
+    transition: 0.5s;
+    cursor: pointer ;
+
+}
+#submitButton:hover{
+    scale: 1.03;
+}
+#submitButton:active{
+    scale: 1;
+}
+#textoCiente{
+    min-height: 100px;
+    width: 100%;
+    display: flex;
+    text-align: start;
+    margin: 60px;
 }

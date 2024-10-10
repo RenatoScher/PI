@@ -6,6 +6,9 @@
     <title>GM Pizzaria</title>
     <link rel="stylesheet" href="../CSS/global.css">
     <link rel="stylesheet" href="../CSS/OrderPages/lastStep.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
     <div>
@@ -13,29 +16,27 @@
             <img src="../Images/gm_logo1.png" alt="">
             <div id="conjunto">
                 <div id="login">@</div>
-                <div id="entrar">log in</div>
+                <div id="entrar"><div class="iconTopBar"></div></div>
                 <div id="sla">config</div>
             </div>
         </nav>
 
         <main class="pad">
-            <h2 class="pad">Informações da Compra</h2>
+            <div id="pleaseuwu">                
+                <div id="uh">
+                    <h2 class="pad">Informações da Compra</h2>
+                </div>
+                
 
             <div id="items">
-                <div id="itemsBox">
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
-                    <div></div>
+                <div id="itemsBox">                
                 </div>
-                <p>R$ 0,00</p>
-            </div>
 
+                
+            </div>
+            <div id="price">
+                <p>R$ 0,00</p>
+            </div>  
             <div id="address">
                 <label for="address">Endereço:</label>
                 <select name="address" id="selectedAddress">
@@ -43,21 +44,6 @@
                     <option value="home">Casa</option>
                     <option value="custom">Customizar</option>
                 </select>
-
-                <div id="customAddress" style="display: none;">
-                    <div>
-                        <label for="bairro">Bairro: </label>
-                        <input type="text" name="bairro" id="bairro">
-                    </div>
-                    <div>
-                        <label for="rua">Rua: </label>
-                        <input type="text" name="rua" id="rua">
-                    </div>
-                    <div>
-                        <label for="numeroCasa">Número da Casa: </label>
-                        <input type="text" name="numeroCasa" id="numeroCasa">
-                    </div>
-                </div>
             </div>
 
             <div id="buttons">
@@ -65,20 +51,23 @@
                 <button>Cancelar e voltar</button>
             </div>
         </div>
+            
+        </div>
         
-        <footer></footer>
+        <footer>
+            <div id="redesSociaisGroup">
+                <div class="redesSociais" id="rede1"></div>
+                <div class="redesSociais" id="rede2"></div>
+            </div>
+            <div id="links">
+                <a href="/Assets/historico.html">historico</a> 
+                <a href="/Assets/OrderPages/menuPage.html">menu</a>
+                <a href="/Assets/LoginPages/forgotPassword.html">login</a>
+                <a href="/Assets/feedback.html">feedback</a>
+            </div>
+        </footer>
     </div>
 
-    <script>
-        let selectedAddress = document.getElementById('selectedAddress');
-        let customAdd = document.getElementById('customAddress');
-
-        selectedAddress.onchange = checkCustom;
-        function checkCustom() {
-            if (this.value == 'custom') { customAdd.style.removeProperty('display') }
-            else { customAdd.style.display = 'none' }
-        }
-        checkCustom()
-    </script>
+    <script type="module" src="../JS/lastStep.js"></script>
 </body>
 </html>

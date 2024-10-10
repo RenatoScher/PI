@@ -8,35 +8,55 @@ main {
     display: grid;
     grid-template-columns: 1fr 240px;
     grid-template-rows: 1fr;
-    column-gap: 48px;
     height: 75vh;
     width: 74vw;
-
     margin-top: 4vh;
 }
 
 #history {
-    background-color: antiquewhite;
-
     display: flex;
     flex-direction: column;
-    row-gap: 48px;
+    row-gap: 0px;
+    border-radius: 10px 0 0 10px;
+    overflow: hidden;
 }
 
 #history > h2 {
     font-size: xx-large;
 }
+#titlesh{
+    background-color: rgba(222, 96, 77, 0.767);
+    position: absolute;
+    z-index: 1;
+    backdrop-filter: blur(5px);
+    width: 56.5vw;
+    border-radius: 8px 0px 0px 0px;
+    box-shadow: -9px 1px 10px 6.5px rgba(99, 9, 9, 0.7);
+    height: 75px;
+    padding: 10px;
+    border:5px solid rgba(128, 23, 23, 0.3);
+}
 
 #historyScroll {
-    background-color: aliceblue;
+    padding-top: 125px;
+    background-color: rgb(252, 202, 164);
     height: 100%;
     display: flex;
     flex-direction: column;
     max-width: 100%;
 }
-
+button{
+    background-color: rgb(239, 173, 128);
+    border:2.5px solid rgba(128, 23, 23, 0.3);
+    border-radius: 10px;
+    color: black;
+    width: 12vw;
+    height: 7.5vh;
+    justify-self: center;
+    align-self: flex-start;
+}
 #historyScroll > div {
-    border: solid;
+    border: solid 2px;
     min-height: 15.66%;
 }
 
@@ -45,11 +65,17 @@ main {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 48px 400px 48px 64px;
+    background-color: rgb(246, 154, 124);
+    position: sticky;
+    border-radius: 0px 10px 10px 0px;
+    border:5px solid rgba(128, 23, 23, 0.3);
 }
 
 #orderDetails > p {
     font-size: x-large;
-    margin-left: 12px;
+    padding: 10px;
+    padding-left: 15px;
+    border-bottom: 5px solid rgba(128, 23, 23, 0.3);
 }
 
 #ordered {
@@ -57,6 +83,8 @@ main {
     overflow-y: scroll;
     max-width: 100%;
     max-height: 100%;
+    padding: 5px;
+    padding-left: 10px;
 }
 
 #ordered > p {
@@ -66,4 +94,10 @@ main {
 #ordered > ul {
     margin-left: 16px;
     max-height: 100%;
+}
+#oderPrice{
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    border-top: 5px solid rgba(128, 23, 23, 0.3);
 }
