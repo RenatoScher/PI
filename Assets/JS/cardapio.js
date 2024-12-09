@@ -3,25 +3,16 @@ fetch('../jsonTest/products.json')
     .then(response => loadElements(response));
 
 const current = document.getElementById('orderType');
-const menuOptions = document.getElementById('menuOptions');
-let subMenuOptions = menuOptions.children;
-const searchbar = document.getElementById('search');
 
-const nextButton = document.getElementById('nextStep');
-const carrinhoLista = document.getElementById('carrinhoLista');
 let carrinho = [];
 
-const pizzaSettings = document.getElementById('pizzaSettings');
-const pizzaFlavoursList = pizzaSettings.querySelector('ul').children;
-const cleanPizza = document.getElementById('cleanPizza');
-const addPizza = document.getElementById('addPizza');
 let pizzaFlavours = [];
 
-current.addEventListener('change', updateDisplay);
+
 
 function updateDisplay() {
-    let a = current.value;
-    for (let b of subMenuOptions) {
+    let a = document.getElementById('orderType').value;
+    for (let b of document.getElementById('menuOptions').children) {
         
         if (b.id == 'menu' + a[0].toUpperCase() + a.substring(1)) {
             b.style.removeProperty('display');
@@ -29,14 +20,16 @@ function updateDisplay() {
         }
         b.style.display = 'none';
     }
+    document.getElementById('search').value = '';
+    searchBar();
 }
 updateDisplay();
 
 function loadElements(products) {
+    const carrinhoLista = document.getElementById('carrinhoLista');
     let customStyle = document.head.appendChild(document.createElement('style'));
 
-    for (let el of subMenuOptions) {
-        console.log(el);
+    for (let el of document.getElementById('menuOptions').children) {
         
         let currData = products[el.id.substring(4)];
         if (currData.length == 0) { continue; }
@@ -66,7 +59,9 @@ function loadElements(products) {
 
             if (el.id == 'menuPizzas') {
                 newDiv.addEventListener('mouseup', () => {
-                    console.log(pizzaSettings);
+                    const pizzaSettings = document.getElementById('pizzaSettings');
+                    const pizzaFlavoursList = pizzaSettings.querySelector('ul').children;
+                    console.log(pizzaFlavoursList)
                     
                     let idname = pizzaSettings.querySelector('input[name=howManyFlavours]:checked').id
                     let maxLength = Number(idname[idname.length - 1]);
@@ -92,7 +87,7 @@ function loadElements(products) {
                                 }
                             }
                         }
-                
+                    
                     } else {
                         let newLi = document.createElement('li');
                         carrinhoLista.appendChild(newLi);
@@ -105,24 +100,38 @@ function loadElements(products) {
             }
         }
     }
+
+    document.getElementById('orderType').onchange = updateDisplay;
+    document.getElementById('nextStep').onmouseup = nextScreen;
+    document.getElementById('search').oninput = searchBar;
+    document.getElementById('cleanPizza').onmouseup = cleanPizzaFlavours;
+    document.getElementById('addPizza').onmouseup = addPizza;
 }
 
-cleanPizza.onmouseup = cleanPizzaFlavours;
+
 function cleanPizzaFlavours() {
     pizzaFlavours = [];
+    const pizzaFlavoursList = pizzaSettings.querySelector('ul').children;
     for (let el of pizzaFlavoursList) {
         el.innerText = 'Escolha um sabor!';
     }
 }
 
-addPizza.onmouseup = function() {
+function addPizza() {
     let idname = pizzaSettings.querySelector('input[name=howManyFlavours]:checked').id
     let maxLength = Number(idname[idname.length - 1]);
 
     if (pizzaFlavours.length != maxLength) {return;}
 
-    carrinho.push('Pizza' + pizzaFlavours.length + ' - (' + pizzaFlavours + ')')
-    console.log(carrinho);
+    carrinho.push('Pizza' + pizzaFlavours.length + ' - (' + pizzaFlavours + ')');
+    
+    let howMany = carrinho.reduce((total, x) => total+Number(x==pName.innerText), 0);
+    console.log(howMany, howMany.toString().length)
+    if (howMany == 1) {
+        curr.innerHTML += ' ' + String(howMany+1) + 'x';
+    } else {
+        curr.innerHTML = curr.innerText.substring(0, curr.innerText.length - (howMany.toString().length+1)) + String(howMany+1) + curr.innerText.charAt(curr.innerText.length-1)
+    }
     
     cleanPizzaFlavours();
 }
@@ -142,12 +151,13 @@ for (let el of pizzaSettings.querySelectorAll('input[name=howManyFlavours]')) {
 }
 
 
-searchbar.oninput = function() {
-    let inp = searchbar.value.toLowerCase();
+function searchBar() {
+    let inp = document.getElementById('search').value.toLowerCase();
 
-    for (let subMenu of subMenuOptions) {
+    for (let subMenu of document.getElementById('menuOptions').children) {
         for (let prod of subMenu.children) {
-            console.log(prod.firstChild.innerText.toLowerCase(), inp, prod.firstChild.innerText.toLowerCase().includes(inp))
+            if (prod.id == 'pizzaSettings') { continue; }
+
             if (!prod.firstChild.innerText.toLowerCase().includes(inp)) {
                 prod.style.display = 'none';
             } else {
@@ -157,7 +167,7 @@ searchbar.oninput = function() {
     }
 }
 
-nextButton.onclick = function() {
+function nextScreen() {
     if (carrinho.length == 0) { return; }
 
     sessionStorage.setItem('carrinho', JSON.stringify(carrinho));
