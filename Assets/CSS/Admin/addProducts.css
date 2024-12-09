@@ -1,6 +1,9 @@
 main {
-    width: 80%;
-    height: 70vh;
+    width: 100%;
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 input, select, option {
@@ -8,11 +11,37 @@ input, select, option {
 }
 
 .addCards {
-    display: grid;
     height: 100%;
     background-color: aliceblue;
+    
 }
 
 #addPizza, #addPorcao {
-    grid-template-rows: repeat(3, 64px) 1fr;
+    height: 350px;
+    width: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    padding: 20px;
+    
+}
+#productaddingshenanigans{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: black;
+    color:white;    
+    padding: 20px;
+    border-radius:12px;
+    
+}
+#pizFlavour{
+    height: 50px;
+    text-align: center;
+    border-radius: 6px;
+    border-style:none;
+    background-color: orange;
+}
+#pizFlavour:{
+    border-style:none;
 }

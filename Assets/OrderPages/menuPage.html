@@ -13,22 +13,6 @@
 </head>
 <body>
     <div>
-        <nav id="topbar">
-            <img src="../Images/gm_logo1.png" alt="">
-            <div id="conjunto">
-                <a href="./Assets/LoginPages/login.html">
-                    <div class="topBarOpts" id="login">
-                        login</div>
-                </a>
-                <a href="./Assets/LoginPages/register.html">
-                    <div class="topBarOpts" id="entrar">sign up</div>
-                </a>
-                <a href="/index.html">
-                    <div class="topBarOpts" id="sla">Home</div>
-                </a>
-            </div>
-        </nav>
-
         <div id="entireScreen" class="pad">
             <div id="menu"> <div id="searchandtitle">
                 <h2>Cardápio</h2>
@@ -114,7 +98,8 @@
             </div>
         </div>
     </div>
-    <script type="module" src="../JS/cardapio.js"></script>
+    <script src="../common/apply.js" onload="load(true, false)" defer></script>
+    <script type="module" src="../JS/cardapio.js" defer></script>
 </div>
 </body>
 </html>
