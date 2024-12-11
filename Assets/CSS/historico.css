@@ -25,7 +25,7 @@ main {
     font-size: xx-large;
 }
 #titlesh{
-    background-color: rgba(222, 96, 77, 0.767);
+    background-color: var(--secundColorContext);
     position: absolute;
     z-index: 1;
     backdrop-filter: blur(5px);
@@ -39,7 +39,7 @@ main {
 
 #historyScroll {
     padding-top: 125px;
-    background-color: rgb(252, 202, 164);
+    background-color: var(--mainColorContext);
     height: 100%;
     display: flex;
     flex-direction: column;
@@ -75,23 +75,23 @@ main {
 }
 
 button{
-    background-color: rgb(239, 173, 128);
+    background-color: var(--buttonsColor);
     border:2.5px solid rgba(128, 23, 23, 0.3);
     border-radius: 10px;
-    color: black;
+    color: white;
     width: 12vw;
     height: 7.5vh;
     justify-self: center;
     align-self: flex-start;
+    cursor:pointer;
 }
 
 
 #orderDetails {
-    background-color: azure;
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 48px 400px 48px 64px;
-    background-color: rgb(246, 154, 124);
+    background-color: var(--mainColorContext);
     position: sticky;
     border-radius: 0px 10px 10px 0px;
     border:5px solid rgba(128, 23, 23, 0.3);

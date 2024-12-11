@@ -1,13 +1,17 @@
-fetch('../jsonTest/products.json')
-    .then(response => response.json())
-    .then(response => loadElements(response));
+window.onload = function() {
+    fetch('../jsonTest/products.json')
+        .then(response => response.json())
+        .then(response => loadElements(response));
+}
+
 
 const current = document.getElementById('orderType');
 
 let carrinho = [];
 
 let pizzaFlavours = [];
-
+let currSize = 0;
+let pizzaSettings, pizzaFlavoursList, howManyFlavours, howManyFlavoursLabel, pizzaSizesInputs;
 
 
 function updateDisplay() {
@@ -26,6 +30,12 @@ function updateDisplay() {
 updateDisplay();
 
 function loadElements(products) {
+    pizzaSettings = document.getElementById('pizzaSettings');
+    pizzaFlavoursList = pizzaSettings.querySelector('ul').children;
+    howManyFlavours = pizzaSettings.querySelectorAll('input[name=howManyFlavours]');
+    howManyFlavoursLabel = pizzaSettings.querySelectorAll('label[for=howManyFlavours]');
+    pizzaSizesInputs = document.getElementById('pizzaSizes').querySelectorAll('input[name=sizePizza]');
+
     const carrinhoLista = document.getElementById('carrinhoLista');
     let customStyle = document.head.appendChild(document.createElement('style'));
 
@@ -55,13 +65,10 @@ function loadElements(products) {
     
             let pPrice = document.createElement('p');
             newDiv.appendChild(pPrice);
-            pPrice.innerHTML = 'R$' + String(prod.price);
+            pPrice.innerHTML = prod.price ? 'R$' + String(prod.price) : prod.ingredients;
 
             if (el.id == 'menuPizzas') {
                 newDiv.addEventListener('mouseup', () => {
-                    const pizzaSettings = document.getElementById('pizzaSettings');
-                    const pizzaFlavoursList = pizzaSettings.querySelector('ul').children;
-                    console.log(pizzaFlavoursList)
                     
                     let idname = pizzaSettings.querySelector('input[name=howManyFlavours]:checked').id
                     let maxLength = Number(idname[idname.length - 1]);
@@ -106,6 +113,53 @@ function loadElements(products) {
     document.getElementById('search').oninput = searchBar;
     document.getElementById('cleanPizza').onmouseup = cleanPizzaFlavours;
     document.getElementById('addPizza').onmouseup = addPizza;
+
+
+    for (let el of howManyFlavours) {
+        el.onchange = function() { updatePizzaFlavoursList(this) };
+    }
+
+
+    for (let inp of pizzaSizesInputs) {
+        inp.onchange = function() { updatePizzaSize(inp) }
+    }
+    updatePizzaFlavoursList(howManyFlavours[0])
+    updatePizzaSize(pizzaSizesInputs[1])
+}
+
+function updatePizzaFlavoursList(t) {
+    let number = Number(t.id[t.id.length-1]);
+    
+    for (let i = 0; i < howManyFlavours.length; i++) {
+        if (i < number) {
+            pizzaFlavoursList[i].style.removeProperty('display');
+        } else {
+            pizzaFlavoursList[i].style.display = 'none';
+        }
+    }
+}
+
+function updatePizzaSize(inp) {
+    currSize = Number(inp.id[inp.id.length - 1]);
+    let last;
+    
+    for (let i = 0; i < 4; i++) {
+        if (currSize >= i) {
+            last = howManyFlavours[i];
+            last.style.removeProperty('display');
+            howManyFlavoursLabel[i].style.removeProperty('display');
+        } else {
+            howManyFlavours[i].style.display = 'none';
+            howManyFlavoursLabel[i].style.display = 'none';
+
+            if (howManyFlavours[i].checked) {
+                howManyFlavours[i].checked = false;
+                last.checked = true;
+                cleanPizzaFlavours();
+                updatePizzaFlavoursList(last);
+            }
+        }
+    }
 }
 
 
@@ -120,34 +174,39 @@ function cleanPizzaFlavours() {
 function addPizza() {
     let idname = pizzaSettings.querySelector('input[name=howManyFlavours]:checked').id
     let maxLength = Number(idname[idname.length - 1]);
+    let pizzaStringSize = currSize == 1 ? 'P' : currSize == 2 ? 'M' : 'G';
 
     if (pizzaFlavours.length != maxLength) {return;}
 
-    carrinho.push('Pizza' + pizzaFlavours.length + ' - (' + pizzaFlavours + ')');
+    carrinho.push('Pizza ' + pizzaStringSize + ' ' + pizzaFlavours.length + ' sabores (' + pizzaFlavours.join(', ') + ')');
+    console.log(carrinho);
     
-    let howMany = carrinho.reduce((total, x) => total+Number(x==pName.innerText), 0);
-    console.log(howMany, howMany.toString().length)
-    if (howMany == 1) {
-        curr.innerHTML += ' ' + String(howMany+1) + 'x';
-    } else {
-        curr.innerHTML = curr.innerText.substring(0, curr.innerText.length - (howMany.toString().length+1)) + String(howMany+1) + curr.innerText.charAt(curr.innerText.length-1)
-    }
     
-    cleanPizzaFlavours();
-}
-
-for (let el of pizzaSettings.querySelectorAll('input[name=howManyFlavours]')) {
-    el.onchange = function() {
-        let number = Number(this.id[this.id.length-1]);
-        
-        for (let i = 0; i < pizzaSettings.querySelectorAll('input[name=howManyFlavours]').length; i++) {
-            if (i < number) {
-                pizzaFlavoursList[i].style.removeProperty('display');
-            } else {
-                pizzaFlavoursList[i].style.display = 'none';
-            }
+    const carrinhoLista = document.getElementById('carrinhoLista');
+    let pizzaLi;
+    for (let curr of carrinhoLista.children) {
+        if (curr.innerHTML.includes('Pizza')) {
+            pizzaLi = curr;
         }
     }
+    if (!pizzaLi) {
+        let newLi = document.createElement('li');
+        carrinhoLista.appendChild(newLi);
+        newLi.innerHTML = 'Pizza';
+    } else {
+        let num = Number(pizzaLi.innerHTML[pizzaLi.innerHTML.length-2]);
+        console.log(pizzaLi.innerHTML[pizzaLi.innerHTML.length-2])
+        if (isNaN(num)) {
+            pizzaLi.innerHTML = "Pizza 2x";
+        } else {
+            pizzaLi.innerHTML = "Pizza " + String(num + 1) + "x";
+        }
+    }
+
+    carrinhoLista.querySelector('p').style.display = 'none';
+    
+    
+    cleanPizzaFlavours();
 }
 
 

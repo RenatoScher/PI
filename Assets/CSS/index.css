@@ -96,7 +96,7 @@ section#description>* {
 .opts {
     height: 70%;
     width: 75%;
-    background:rgb(245, 43, 36);
+    background:var(--buttonsColor);
     border-radius: 12px;
     color: white;
     display: flex;
@@ -186,7 +186,7 @@ section#description>* {
     /* animation: pizzaIntro 1s; */
 }
 #whiteBack{
-    background-color: rgb(252, 202, 164);
+    background-color: var(--mainColorContext);
     
     
 }
@@ -212,7 +212,7 @@ section#description>* {
     }
 }
 footer {
-    background-color: darkred;
+    background-color: var(--footerColor);
     position: relative;
     bottom: 0;
     margin: 0px;

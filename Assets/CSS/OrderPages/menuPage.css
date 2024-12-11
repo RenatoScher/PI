@@ -68,13 +68,8 @@ margin: 10px;
     border: none;
 }
 #orderType{
-    background-color: rgb(154, 43, 23);
-    border: none;
-    border-radius: 5px;
-    padding: 5px;
     margin-left: 10px;
     margin-right: 20px;
-    color: white;
 }
 
 #menuOptions > div > div {

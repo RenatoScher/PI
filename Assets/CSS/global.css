@@ -5,8 +5,29 @@
     font-weight: 300;
     font-style: italic;
 }
+:root{
+    --mainColor:rgba(204, 121, 58, 0.9);
+    --mainColorContext:rgb(252, 202, 164);
+    --secundColorContext:rgba(222, 148, 135, 0.767);
+    --footerColor: darkred;
+    --buttonsColor: red;
+    --buttonsColorHover:rgb(229, 0, 0);
+    --selectColors: rgb(154, 43, 23);
 
+    
+        
 
+}
+
+select{
+    background-color: var(--selectColors);
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    color: white;
+    cursor: pointer;
+    
+}
 body {
     width: 100vw;
     max-width: 100%;
@@ -62,11 +83,16 @@ nav#topbar {
     }
 }
 
-#topbar>img {
+#topbar>a {
     margin-left: 12px;
     margin-top: 6px;
     width: 240px;
     height: 80px;
+}
+
+#topbar>a>img {
+    width: 100%;
+    height: 100%;
 }
 
 #conjunto {
@@ -108,7 +134,7 @@ a:hover {
 }
 
 #login {
-    background-color: rgba(204, 121, 58, 0.9);
+    background: var(--mainColor);
     transition-duration: 1s;
     /*Se mata penis man*/
 }
@@ -162,7 +188,7 @@ footer {
 #links{
     width: 500px;
     height:40px;
-    background:red;
+    background:var(--buttonsColor);
     display: flex;
     justify-content: space-around;
     align-items: center;

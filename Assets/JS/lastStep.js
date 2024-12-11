@@ -2,14 +2,13 @@ fetch('../jsonTest/products.json')
     .then(response => response.json())
     .then(response => loadItemsInCart(response));
 
-let selectedAddress = document.getElementById('selectedAddress');
-let customAdd = document.getElementById('customAddress');
+let itemsbox, totalPrice;
 let carrinho = JSON.parse(sessionStorage.getItem('carrinho'));
-let itemsbox = document.getElementById('itemsBox');
-let totalPrice = document.getElementById('price').querySelector('p');
+let pizzaPrices = {"P": 39.99, "M": 79.99, "G": 99.99}
 
-selectedAddress.onchange = checkCustom;
-function checkCustom() {
+function checkCustom() { console.log('custom')
+    let selectedAddress = document.getElementById('selectedAddress');
+    if (!selectedAddress) { return; }
     if (selectedAddress.value == 'custom') { window.location.replace('../LoginPages/registerAddress2.html') }
 }
 
@@ -21,11 +20,14 @@ function loadItemsInCart(productsData) {
     let alrAdded = [];
     let aPrice = 0;
 
+    itemsbox = document.getElementById('itemsBox');
+    totalPrice = document.getElementById('price').querySelector('p');
+
     for (let el of carrinho) {
         if (alrAdded.includes(el)) {
             continue;
         }
-
+        
 
         let quantity = carrinho.reduce((total, x) => total+Number(x == el), 0);
         
@@ -33,12 +35,18 @@ function loadItemsInCart(productsData) {
         let currType;
         for (let [key, type] of Object.entries(productsData)) {
             for (let prod of type) {
-                if (prod.name == el || prod.flavour == el) {
+                let flav = el.match(/\(([^)]+)\)/);
+                if (prod.name == el || (flav && prod.flavour == flav[1].split(',')[0])) {
                     currData = prod;
                     currType = key;
                 }
             }
         }
+        
+        if (el.includes("Pizza")) {
+            currData.price = pizzaPrices[el[6]];
+        }
+
 
         let newDiv = document.createElement('div');
         itemsbox.appendChild(newDiv);
@@ -62,7 +70,22 @@ function loadItemsInCart(productsData) {
     totalPrice.innerText = 'R$ ' + String(aPrice);
 }
 
-if (sessionStorage.getItem('customAddress')) {
-    //Verify address first
-    selectedAddress.querySelector('option[value=\'custom\']').selected = 'selected'
-}
+
+document.addEventListener('DOMContentLoaded', function() {
+    setTimeout(() => {
+        let selectedAddress = document.getElementById('selectedAddress');
+        selectedAddress.addEventListener("change", checkCustom)
+    }, 100);
+
+    document.body.addEventListener('change', function(event) {
+        if (event.target && event.target.id === 'selectedAddress') {
+            console.log('please');
+        }
+    });
+    
+    if (sessionStorage.getItem('customAddress')) {
+        //Verify address first
+        if (!selectedAddress) { return; }
+        selectedAddress.querySelector('option[value=\'custom\']').selected = 'selected'
+    }
+});

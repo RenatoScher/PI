@@ -1,10 +1,4 @@
-:root{
-    
-    --mainColor: orange;
-    --mainColorSelected:rgb(255, 186, 59);
-    --buttonsColors:red;
-    --buttonsColorSelected: rgb(209, 0, 0);
-}
+
 #main{
     height: 100vh;
     width: 100vw;
@@ -16,7 +10,7 @@
 #container{
     height: 500px;
     width: 1000px;
-    background:white;
+    background-color: var(--mainColorContext);
     display:flex;
     justify-content: space-between;
     align-items: center;
@@ -28,7 +22,7 @@
 #containerProducts{
     width: 95%;
     height: 500px;
-    background:orange;
+    background:var(--mainColor);
     margin:10px;
     overflow-y: scroll;
     display: flex;
@@ -43,6 +37,7 @@
     justify-content: space-around;
     align-items: center;
     cursor: pointer;
+    width: 100%;
     
 }
 #selectProduct{
@@ -62,14 +57,14 @@
     height: 50px;
     width: 150px;
     border-style:none;
-    background:var(--buttonsColors);
     border-radius:6px;
     cursor:pointer;
     transition-duration: 0.5s;
     color: white    ;
+    background: var(--buttonsColor);
 }
 #botaoSubmite:hover{
-    background: var(--buttonsColorSelected);
+    background: var(--buttonsColorHover);
 }
 #botaoSubmite:active{
 scale:0.95;
@@ -79,7 +74,6 @@ scale:0.95;
     width: 30.33%;
     margin: 4px;
     border-radius: 6px;
-    background:white;
     overflow: hidden;
     cursor:pointer;
     
@@ -95,3 +89,4 @@ height:30% ;
 background: white;
 
 }
+

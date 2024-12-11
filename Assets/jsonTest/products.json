@@ -4,21 +4,21 @@
             "id": 0,
             "name": "Batata Frita 250g",
             "image": "batata_frita.jpg",
-            "price": 8.50,
+            "price": 2.49,
             "desc": "250g"
         },
         {
             "id": 1,
             "name": "Batata Frita 350g",
             "image": "#",
-            "price": 8.50,
+            "price": 3.49,
             "desc": "350g"
         },
         {
             "id": 2,
             "name": "Batata Frita 500g",
             "image": "#",
-            "price": 8.50,
+            "price": 4.99,
             "desc": "500g"
         }
     ],
@@ -27,28 +27,28 @@
             "id": 0,
             "name": "Suco de Uva",
             "image": "#",
-            "price": 8.50,
+            "price": 7.99,
             "quantidade_ml": 200
         },
         {
             "id": 1,
             "name": "Suco de Abacaxi",
             "image": "#",
-            "price": 8.50,
+            "price": 7.99,
             "quantidade_ml": 200
         },
         {
             "id": 2,
             "name": "Suco de Acerola",
             "image": "#",
-            "price": 8.50,
+            "price": 7.99,
             "quantidade_ml": 200
         },
         {
             "id": 3,
             "name": "Skol",
             "image": "#",
-            "price": 8.50,
+            "price": 17.99,
             "quantidade_ml": 250
         }
     ],
@@ -56,37 +56,37 @@
         {
             "id": 0,
             "image": "#",
-            "price": 8.50,
+            "ingredients": "Calabresa",
             "flavour": "Calabresa",
-            "desc": "fnklkladnklrgsnkl"
+            "desc": "Calabrasa"
         },
         {
             "id": 1,
             "image": "#",
-            "price": 8.50,
+            "ingredients": "Bacon",
             "flavour": "Bacon",
-            "desc": "fnklkladnklrgsnkl"
+            "desc": "Bacn"
         },
         {
             "id": 2,
             "image": "#",
-            "price": 8.50,
+            "ingredients": "Abacaxi, presunto",
             "flavour": "Havaina",
-            "desc": "fnklkladnklrgsnkl"
+            "desc": "Hawaiana"
         },
         {
             "id": 3,
             "image": "#",
-            "price": 8.50,
+            "ingredients": "Chocolate",
             "flavour": "Chocolate",
-            "desc": "fnklkladnklrgsnkl"
+            "desc": "Choolate"
         },
         {
             "id": 4,
             "image": "#",
-            "price": 20.8,
+            "ingredients": "Frango",
             "flavour": "Frango",
-            "desc": "fnklkladnklrgsnkl"
+            "desc": "Fragno"
         }
     ]
 }
