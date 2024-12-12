@@ -5,8 +5,34 @@
     font-weight: 300;
     font-style: italic;
 }
+:root{
+    --mainColor:rgb(220, 220, 220);
+    --secundColor:rgb(200,200,200);
+    --thirdColor:rgb(190,190,190);
+    --fourthColor:rgb(180,180,180);
+    --shadowColor:rgb(10,10,10,10);
+    --secundShadowColor: rgb(15,15,15);
+    --mainColorContext:rgb(170,170,170);
+    --secundColorContext:(175,175,175);
+    --footerColor: rgb(120,0,0);
+    --buttonsColor: rgb(215, 0, 0);
+    --buttonsColorHover:rgb(255, 0, 0);
+    --selectColors: rgb(120,120,120);
 
+    
+        
 
+}
+
+select{
+    background-color: var(--selectColors);
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    color: white;
+    cursor: pointer;
+    
+}
 body {
     width: 100vw;
     max-width: 100%;
@@ -39,11 +65,11 @@ nav#topbar {
     justify-content: space-between;
     overflow: hidden;
     box-shadow: 15px 0px 20px black;
-    border: 2.5px solid rgba(128, 23, 23, 0.9);
+    border: 2.5px solid var(--thirdColor);
     border-top: none;
-    background-color: rgba(205, 74, 54, 0.9);
+    background-color: var(--secundColor);
     backdrop-filter: blur(10px);
-    box-shadow: 0px 4px 10px 6.5px rgba(99, 9, 9, 0.7);
+    box-shadow: 0px 4px 10px 6.5px var(--shadowColor);
     z-index: 2;
     animation: mainAnimation 2s forwards;
     animation-delay: 0.5s;
@@ -62,11 +88,16 @@ nav#topbar {
     }
 }
 
-#topbar>img {
+#topbar>a {
     margin-left: 12px;
     margin-top: 6px;
     width: 240px;
     height: 80px;
+}
+
+#topbar>a>img {
+    width: 100%;
+    height: 100%;
 }
 
 #conjunto {
@@ -108,7 +139,7 @@ a:hover {
 }
 
 #login {
-    background-color: rgba(204, 121, 58, 0.9);
+    background: var(--mainColor);
     transition-duration: 1s;
     /*Se mata penis man*/
 }
@@ -116,17 +147,17 @@ a:hover {
 #entrar {
 
     /*Se mata penis man*/
-    background-color: rgba(180, 105, 48, 0.9);
+    background-color: var(--secundColor);
 }
 
 /*Se mata penis man*/
 #sla {
     /*Se mata penis man*/
-    background-color: rgba(172, 79, 50, 0.9);
+    background-color: var(--thirdColor);
 }
 
 footer {
-    background-color: rgba(148, 27, 23, 0.75);
+    background-color: var(--footerColor);
     position: relative;
     bottom: 0;
     /* margin-top: 12vh; */
@@ -162,7 +193,7 @@ footer {
 #links{
     width: 500px;
     height:40px;
-    background:red;
+    background:var(--buttonsColor);
     display: flex;
     justify-content: space-around;
     align-items: center;

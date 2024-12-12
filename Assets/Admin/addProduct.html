@@ -11,24 +11,20 @@
 </head>
 <body>
     <div>
-        <nav id="topbar">
-            <img src="../Images/gm_logo1.png" alt="">
-            <div id="conjunto">
-                <a href="./Assets/LoginPages/login.html"><div id="login"><img class="icon" src="https://img.icons8.com/?size=100&id=61050&format=png&color=000000"></div></a>
-                <a href="./Assets/LoginPages/register.html"><div id="entrar">log in</div></a>
-                <a href="./Assets/userPage.html"><div id="sla">config</div></a>
-            </div>
-        </nav>
 
         <main class="pad">
-            <h2>Adicionar Produtos</h2>
+            <div id="productaddingshenanigans">
+                <div id="titlesh">
+                <h2>Adicionar Produtos</h2>
 
             <select name="type" id="addType">
                 <option value="pizza" selected>Pizza</option>
                 <option value="bebida">Bebida</option>
                 <option value="porcao">Porcao</option>
             </select>
-            
+        </div>
+
+            <div id="variousvarieties">
             <div id="addPizza" class="addCards">
                 <input type="text" name="flavour" id="pizFlavour" placeholder="Sabor">
                 <input type="number" name="price" id="pizPrice" min="0">
@@ -50,10 +46,17 @@
                 <input type="text" name="desc" id="porDesc">
             </div>
 
-            <button id="sendButton">Enviar</button>
+            <button id="sendButton">Enviar</button> 
+            
+            </div>
+
+
+            </div>
+            
         </main>
     </div>
 
     <script src="../JS/Admin/addProduct.js"></script>
+    <script src="../common/apply.js"></script>
 </body>
 </html>

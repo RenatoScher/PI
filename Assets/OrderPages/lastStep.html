@@ -7,20 +7,11 @@
     <link rel="stylesheet" href="../CSS/global.css">
     <link rel="stylesheet" href="../CSS/OrderPages/lastStep.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
     <div>
-        <nav id="topbar">
-            <img src="../Images/gm_logo1.png" alt="">
-            <div id="conjunto">
-                <div id="login">@</div>
-                <div id="entrar"><div class="iconTopBar"></div></div>
-                <div id="sla">config</div>
-            </div>
-        </nav>
-
         <main class="pad">
             <div id="pleaseuwu">                
                 <div id="uh">
@@ -47,27 +38,15 @@
             </div>
 
             <div id="buttons">
-                <button>Pedir Delivery</button>
-                <button>Cancelar e voltar</button>
+                <button onmouseup="window.location.href = '/index.html'" class="leavePage">Pedir Delivery</button>
+                <button onmouseup="window.location.href = '/index.html'" class="leavePage">Cancelar e voltar</button>
             </div>
         </div>
             
         </div>
-        
-        <footer>
-            <div id="redesSociaisGroup">
-                <div class="redesSociais" id="rede1"></div>
-                <div class="redesSociais" id="rede2"></div>
-            </div>
-            <div id="links">
-                <a href="/Assets/historico.html">historico</a> 
-                <a href="/Assets/OrderPages/menuPage.html">menu</a>
-                <a href="/Assets/LoginPages/forgotPassword.html">login</a>
-                <a href="/Assets/feedback.html">feedback</a>
-            </div>
-        </footer>
     </div>
 
-    <script type="module" src="../JS/lastStep.js"></script>
+    <script src="../JS/lastStep.js"></script>
+    <script src="../common/apply.js" onload="load(true, false)"></script>
 </body>
 </html>

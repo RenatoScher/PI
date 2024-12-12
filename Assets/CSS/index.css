@@ -96,7 +96,7 @@ section#description>* {
 .opts {
     height: 70%;
     width: 75%;
-    background:rgb(245, 43, 36);
+    background:var(--buttonsColor);
     border-radius: 12px;
     color: white;
     display: flex;
@@ -169,7 +169,7 @@ section#description>* {
 #descrImg {
     width: 100%;
     height: 260px;
-    background: red;
+    background: var(--secundColor);
     display: flex;
     align-items: center;
     justify-content: space-around;
@@ -186,7 +186,10 @@ section#description>* {
     /* animation: pizzaIntro 1s; */
 }
 #whiteBack{
-    background-color: rgb(252, 202, 164);
+    background-color: var(--mainColorContext);
+    border-radius: 12px;
+    margin: 20px;
+    overflow: hidden;
     
     
 }
@@ -212,7 +215,7 @@ section#description>* {
     }
 }
 footer {
-    background-color: darkred;
+    background-color: var(--footerColor);
     position: relative;
     bottom: 0;
     margin: 0px;
