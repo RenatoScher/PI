@@ -61,13 +61,13 @@ function loadItemsInCart(productsData) {
     
         let pPrice = document.createElement('p');
         newDiv.appendChild(pPrice);
-        pPrice.innerText = 'R$' + String(currData.price * quantity);
+        pPrice.innerText = 'R$' + String(Math.floor(currData.price * quantity * 100) / 100);
         aPrice += currData.price * quantity;
 
         alrAdded.push(el);
     }
 
-    totalPrice.innerText = 'R$ ' + String(aPrice);
+    totalPrice.innerText = 'R$ ' + String(Math.floor(aPrice * 100) / 100);
 }
 
 

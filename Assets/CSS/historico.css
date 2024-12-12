@@ -31,27 +31,28 @@ main {
     backdrop-filter: blur(5px);
     width: 56.5vw;
     border-radius: 8px 0px 0px 0px;
-    box-shadow: -9px 1px 10px 6.5px rgba(99, 9, 9, 0.7);
+   /* box-shadow: -9px 1px 10px 0.5px var(--shadowColor);*/
     height: 75px;
     padding: 10px;
-    border:5px solid rgba(128, 23, 23, 0.3);
+    border:5px solid var(--secundShadowColor);
 }
 
 #historyScroll {
     padding-top: 125px;
-    background-color: var(--mainColorContext);
+    background-color: var(--mainColor);
     height: 100%;
     display: flex;
     flex-direction: column;
     max-width: 100%;
+    overflow-y: scroll;
 }
 #historyScroll > div {
     border-radius: 10px;
     box-shadow: 2.5px 2.5px 10px 0.5px rgba(31, 30, 30, 0.704);
     margin: 5px;
-    background-color: rgba(226, 146, 109, 0.767);
+    background-color: var(--mainColorContext);
     overflow: hidden;
-    border:5px solid rgba(128, 23, 23, 0.3);
+    border:5px solid var(--shadowColor);
     min-height: 15.66%;
     display: grid;
     grid-template-columns: 50px 1fr 100px 1fr;
@@ -61,14 +62,14 @@ main {
 }
 #historyScroll > div > div:nth-of-type(1) {
     grid-area: 1 / 1 / 2 / 2;
-    border-right: 2.5px solid rgba(128, 23, 23, 0.3);  
+    border-right: 2.5px var(--shadowColor);  
 }
 #historyScroll > div > div:nth-of-type(2) {
     grid-area: 1 / 2 / 2 / 3;
-    border-right: 2.5px solid rgba(128, 23, 23, 0.3);
+    border-right: 2.5px solid var(--shadowColor);
 }#historyScroll > div > div:nth-of-type(3) {
     grid-area: 1 / 3 / 2 / 4;
-    border-right: 2.5px solid rgba(128, 23, 23, 0.3);
+    border-right: 2.5px solid var(--shadowColor);
 }
 #historyScroll > div > div:nth-of-type(4) {
     grid-area: 1 / 4 / 2 / 5;
@@ -76,7 +77,7 @@ main {
 
 button{
     background-color: var(--buttonsColor);
-    border:2.5px solid rgba(128, 23, 23, 0.3);
+    border:2.5px solid var(--shadowColor);
     border-radius: 10px;
     color: white;
     width: 12vw;
@@ -84,6 +85,10 @@ button{
     justify-self: center;
     align-self: flex-start;
     cursor:pointer;
+    transition-duration: 0.5s;
+}
+button:hover{
+    background: var(--buttonsColorHover);
 }
 
 
@@ -94,14 +99,14 @@ button{
     background-color: var(--mainColorContext);
     position: sticky;
     border-radius: 0px 10px 10px 0px;
-    border:5px solid rgba(128, 23, 23, 0.3);
+    
 }
 
 #orderDetails > p {
     font-size: x-large;
     padding: 10px;
     padding-left: 15px;
-    border-bottom: 5px solid rgba(128, 23, 23, 0.3);
+    border-bottom: 5px solid var(--shadowColor);
 }
 
 #ordered {

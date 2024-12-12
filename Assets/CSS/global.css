@@ -6,13 +6,18 @@
     font-style: italic;
 }
 :root{
-    --mainColor:rgba(204, 121, 58, 0.9);
-    --mainColorContext:rgb(252, 202, 164);
-    --secundColorContext:rgba(222, 148, 135, 0.767);
-    --footerColor: darkred;
-    --buttonsColor: red;
-    --buttonsColorHover:rgb(229, 0, 0);
-    --selectColors: rgb(154, 43, 23);
+    --mainColor:rgb(220, 220, 220);
+    --secundColor:rgb(200,200,200);
+    --thirdColor:rgb(190,190,190);
+    --fourthColor:rgb(180,180,180);
+    --shadowColor:rgb(10,10,10,10);
+    --secundShadowColor: rgb(15,15,15);
+    --mainColorContext:rgb(170,170,170);
+    --secundColorContext:(175,175,175);
+    --footerColor: rgb(120,0,0);
+    --buttonsColor: rgb(215, 0, 0);
+    --buttonsColorHover:rgb(255, 0, 0);
+    --selectColors: rgb(120,120,120);
 
     
         
@@ -60,11 +65,11 @@ nav#topbar {
     justify-content: space-between;
     overflow: hidden;
     box-shadow: 15px 0px 20px black;
-    border: 2.5px solid rgba(128, 23, 23, 0.9);
+    border: 2.5px solid var(--thirdColor);
     border-top: none;
-    background-color: rgba(205, 74, 54, 0.9);
+    background-color: var(--secundColor);
     backdrop-filter: blur(10px);
-    box-shadow: 0px 4px 10px 6.5px rgba(99, 9, 9, 0.7);
+    box-shadow: 0px 4px 10px 6.5px var(--shadowColor);
     z-index: 2;
     animation: mainAnimation 2s forwards;
     animation-delay: 0.5s;
@@ -142,17 +147,17 @@ a:hover {
 #entrar {
 
     /*Se mata penis man*/
-    background-color: rgba(180, 105, 48, 0.9);
+    background-color: var(--secundColor);
 }
 
 /*Se mata penis man*/
 #sla {
     /*Se mata penis man*/
-    background-color: rgba(172, 79, 50, 0.9);
+    background-color: var(--thirdColor);
 }
 
 footer {
-    background-color: rgba(148, 27, 23, 0.75);
+    background-color: var(--footerColor);
     position: relative;
     bottom: 0;
     /* margin-top: 12vh; */

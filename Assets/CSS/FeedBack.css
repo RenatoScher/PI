@@ -1,18 +1,12 @@
 
 
-#containerFeedBack {
-    height: 95vw;
-    width: 95.9vw;
-    color: black;
-    display: flex;
-
-}
+    
 
 #bloco {
     
     min-width: 70vw;
-    background-color: rgb(252, 202, 164);
-    border:5px solid rgba(128, 23, 23, 0.3);
+    background-color: var(--mainColorContext);
+    border:5px solid var();
     min-height: 160vh;
     margin: 140px;
     padding: 50px;
@@ -106,7 +100,7 @@
     width: 300px;
     color: white;
     border: none;
-    background-color: red;
+    background-color: var(--buttonsColor);
     border-radius:12px;
     transition: 0.5s;
     cursor: pointer ;
@@ -114,6 +108,7 @@
 }
 #submitButton:hover{
     scale: 1.03;
+    background: var(--buttonsColorHover);
 }
 #submitButton:active{
     scale: 1;

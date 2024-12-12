@@ -30,14 +30,22 @@ document.addEventListener('DOMContentLoaded', function() {
 function sendFeedback(){
     const grupos = document.querySelectorAll('.stars input[type="radio"]');
     let valorTotal = 0;
+    let gcount = 0;
     
     grupos.forEach(grupo => {
         if (grupo.checked) {
             console.log(`Grupo: ${grupo.name}, Valor: ${grupo.value}`);
             let convertionNumberValue = Number(grupo.value);
-            valorTotal = valorTotal+convertionNumberValue;               
+            valorTotal += convertionNumberValue;
+            gcount++;         
         }
     });
+    
+    if (gcount < 4) {
+        console.log("todos os campos devem ser preenchidos");
+        return;
+    }
+    
 
     let averageRating = media(valorTotal);
     console.log("avg: " + averageRating);

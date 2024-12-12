@@ -7,7 +7,7 @@ window.onload = function() {
 
 const current = document.getElementById('orderType');
 
-let carrinho = [];
+let carrinho = JSON.parse(sessionStorage.getItem("carrinho")) ?? [];
 
 let pizzaFlavours = [];
 let currSize = 0;
@@ -38,6 +38,25 @@ function loadElements(products) {
 
     const carrinhoLista = document.getElementById('carrinhoLista');
     let customStyle = document.head.appendChild(document.createElement('style'));
+
+    //load carrinho
+    if (carrinho.length > 0) {
+        carrinhoLista.querySelector("p").style.display = "none";
+        let alreadyDone = [];
+        for (let prod of carrinho) {
+            if (alreadyDone.includes(prod)) {
+                continue;
+            }
+
+            let count = carrinho.reduce((t, x) => t+(x==prod), 0);
+
+            let newLi = document.createElement('li');
+            newLi.innerText = prod + (count > 1 ? " " + count + "x" : "");
+            carrinhoLista.appendChild(newLi);
+
+            alreadyDone.push(prod);
+        }
+    }
 
     for (let el of document.getElementById('menuOptions').children) {
         
@@ -77,6 +96,7 @@ function loadElements(products) {
 
                     pizzaFlavoursList[pizzaFlavours.length].innerText = prod.flavour;
                     pizzaFlavours.push(prod.flavour);
+                    saveCarrinho();
                     
                 });
 
@@ -101,7 +121,8 @@ function loadElements(products) {
                         newLi.innerText = pName.innerText;
                     }
                         
-                    carrinho.push(pName.innerText)
+                    carrinho.push(pName.innerText);
+                    saveCarrinho();
                     carrinhoLista.querySelector('p').style.display = 'none';
                 });
             }
@@ -179,7 +200,7 @@ function addPizza() {
     if (pizzaFlavours.length != maxLength) {return;}
 
     carrinho.push('Pizza ' + pizzaStringSize + ' ' + pizzaFlavours.length + ' sabores (' + pizzaFlavours.join(', ') + ')');
-    console.log(carrinho);
+    saveCarrinho();
     
     
     const carrinhoLista = document.getElementById('carrinhoLista');
@@ -229,6 +250,10 @@ function searchBar() {
 function nextScreen() {
     if (carrinho.length == 0) { return; }
 
-    sessionStorage.setItem('carrinho', JSON.stringify(carrinho));
+    saveCarrinho();
     window.location.replace('./lastStep.html');
+}
+
+function saveCarrinho() {
+    sessionStorage.setItem('carrinho', JSON.stringify(carrinho));
 }

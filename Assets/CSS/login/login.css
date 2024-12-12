@@ -1,11 +1,18 @@
 * {
-    color: white;
-}
-
-input, button {
     color: black;
 }
 
+input,
+button {
+    color: black;
+}
+input{
+    border-radius: 2px;
+    border:none;
+}
+input:focus-visible{
+    outline: none;
+}
 body {
     display: grid;
     place-items: center;
@@ -13,19 +20,19 @@ body {
     min-height: 100vh;
 }
 
-body > div {
+body>div {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 5px solid rgba(128, 23, 23, 0.3);
+    border: 5px solid var(--shadowColor);
     border-radius: 7.5px;
     width: 35vw;
-    background-color: rgba(212, 98, 76, 0.15);
+    background-color: var(--mainColor);
     backdrop-filter: blur(1px);
-    box-shadow: 0px 4px 10px 6.5px rgba(99, 9, 9, 0.7);
+    box-shadow: 0px 4px 10px 6.5px var(--shadowColor);
 }
 
-body > div#register1 {
+body>div#register1 {
     height: 80vh;
 }
 
@@ -41,20 +48,20 @@ form {
     row-gap: 2px;
 }
 
-form > input {
+form>input {
     margin-bottom: 6px;
     border: 3px solid #b63c3c;
     border-radius: 4px;
 }
 
 
-form > #TOS {
+form>#TOS {
     align-self: center;
     margin-top: 6px;
     margin-bottom: 24px;
 }
 
-form > #submit {
+form>#submit {
     width: 40%;
     height: 28px;
     align-self: center;
@@ -69,7 +76,7 @@ form > #submit {
     text-align: center;
 } */
 
-body > div#register2 {
+body>div#register2 {
     height: 56vh;
     font-size: larger;
 }
@@ -81,23 +88,34 @@ body > div#register2 {
     row-gap: 18px;
 }
 
-#smsBox > #smsNext {
+#smsBox>#smsNext {
     width: 40%;
     height: 26px;
     align-self: center;
     margin-top: 2px;
 }
 
-#smsNext > button {
+#smsNext>button:hover {
+    background:var(--buttonsColorHover);
+    scale: ;
+}
+#smsNext>button {
     height: 100%;
     width: 100%;
+    background: var(--buttonsColor);
+    color:white;
+    border:none;
+    border-radius:12px;
+    transition-duration: 0.5s;
+    cursor: pointer;
 }
 
 #smsCodeBox {
     display: flex;
     flex-direction: column;
 }
-#smsCodeBox > div {
+
+#smsCodeBox>div {
     width: 100%;
     margin-top: 4%;
     display: flex;
@@ -106,8 +124,9 @@ body > div#register2 {
     row-gap: 6px;
     margin-bottom: 6px;
 }
+
 #smsCodeBox a {
-    color: beige;
+    color:black;
 }
 
 #renewPassword {
@@ -116,7 +135,7 @@ body > div#register2 {
     row-gap: 16px;
 }
 
-#renewPassword > div {
+#renewPassword>div {
     display: flex;
     flex-direction: column;
 }

@@ -4,6 +4,9 @@
 
 input {
     color: black;
+    border: none;
+    border-radius: 6px;
+    outline: none;
 }
 
 body {
@@ -14,19 +17,19 @@ body {
 }
 
 a {
-    color: beige;
+    color: white;
 }
 
 body > div {
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: 5px solid rgba(128, 23, 23, 0.3);
+    border: 5px solid var(--shadowColor);
     border-radius: 7.5px;
     width: 35vw;
-    background-color: rgba(212, 98, 76, 0.15);
+    background-color: var(--mainColor);
     backdrop-filter: blur(1px);
-    box-shadow: 0px 4px 10px 6.5px rgba(99, 9, 9, 0.7);
+    box-shadow: 0px 4px 10px 0.5px var(--shadowColor);
     padding-bottom: 8vh;
 }
 
@@ -44,7 +47,7 @@ form, div#form {
 
 form > input, div#form > input {
     margin-bottom: 6px;
-    border: 3px solid #b63c3c;
+    border: 3px solid var(--secundshadowColor);
     border-radius: 4px;
 }
 
@@ -91,9 +94,17 @@ body > div#register2 {
     margin-top: 16px;
 }
 
+#smsNext > button:hover{
+    background: var(--buttonsColorHover);
+}
 #smsNext > button {
     height: 100%;
     width: 100%;
+    background: var(--buttonsColor);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition-duration: 0.5s;
 }
 
 #resend {
